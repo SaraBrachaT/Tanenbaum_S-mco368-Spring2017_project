@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBModel.Context" Class="LinqToSqlClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SBT-PC1\SQLEXPRESS;Initial Catalog=DBModel.Context;Integrated Security=True" SettingsObjectName="DBClasses.Properties.Settings" SettingsPropertyName="DBModel_ContextConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Items" Member="Items">
+    <Type Name="Item">
+      <Column Name="ItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Item_Purchase" Member="Purchases" ThisKey="ItemId" OtherKey="Item_ItemId" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Balance" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="User_Purchase" Member="Purchases" ThisKey="UserId" OtherKey="User_UserId" Type="Purchase" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Purchases" Member="Purchases">
+    <Type Name="Purchase">
+      <Column Name="PurchaseId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PurchaseDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Item_ItemId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="User_UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Member="PurchaseQuantity" Type="System.Int32" CanBeNull="false" />
+      <Association Name="Item_Purchase" Member="Item" ThisKey="Item_ItemId" OtherKey="ItemId" Type="Item" IsForeignKey="true" />
+      <Association Name="User_Purchase" Member="User" ThisKey="User_UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

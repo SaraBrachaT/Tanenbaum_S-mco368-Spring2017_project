@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBClasses", "DBClasses\DBClasses.csproj", "{451387BF-E00F-457E-A507-5E965B695170}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBModel", "DBModel\DBModel.csproj", "{3CB3E5E2-F485-4DB0-BC5E-B1A52972167A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CClasses", "CClasses\CClasses.csproj", "{A68DED3A-0AC0-4740-BD92-2BCF1A748E2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{451387BF-E00F-457E-A507-5E965B695170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{451387BF-E00F-457E-A507-5E965B695170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{451387BF-E00F-457E-A507-5E965B695170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{451387BF-E00F-457E-A507-5E965B695170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB3E5E2-F485-4DB0-BC5E-B1A52972167A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB3E5E2-F485-4DB0-BC5E-B1A52972167A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB3E5E2-F485-4DB0-BC5E-B1A52972167A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB3E5E2-F485-4DB0-BC5E-B1A52972167A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68DED3A-0AC0-4740-BD92-2BCF1A748E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68DED3A-0AC0-4740-BD92-2BCF1A748E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68DED3A-0AC0-4740-BD92-2BCF1A748E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68DED3A-0AC0-4740-BD92-2BCF1A748E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
